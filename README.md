@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is the UI project for [Employee Management API](https://github.com/linshenjie321/EmployeeManagement).
 
 ## Available Scripts
 
