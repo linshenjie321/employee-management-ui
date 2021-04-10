@@ -1,11 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import EmployeeDetailForm from './components/EmployeeDetailForm';
+import EmployeeSearchContainer from './components/EmployeeSearchContainer';
 
 function App() {
   return (
-    <EmployeeDetailForm />
-    
+    <div>
+      <EmployeeDetailForm />
+      <EmployeeSearchContainer />
+    </div>
   );
 }
 
