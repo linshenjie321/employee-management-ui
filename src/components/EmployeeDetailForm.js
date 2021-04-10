@@ -1,4 +1,6 @@
 import React from 'react';
+import Form  from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 class EmployeeDetailForm extends React.Component {
     constructor(props) {
@@ -16,7 +18,15 @@ class EmployeeDetailForm extends React.Component {
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
-  
+    
+    componentDidMount() {
+      console.log('component mounted...');
+    }
+
+    componentWillUnmount() {
+      console.log('component unmounted...');
+    }
+
     handleChange(event) {
       let inputFieldName = event.target.name;
       let inputfieldValue = event.target.value;
@@ -38,8 +48,51 @@ class EmployeeDetailForm extends React.Component {
   
     render() {
       return (
+
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Group controlId="firstName">
+            <Form.Label>First Name</Form.Label>
+            <Form.Control type="text" placeholder="" name="firstName" value={this.state.firstName} onChange={this.handleChange}/>
+          </Form.Group>
+          <Form.Group controlId="middleName">
+            <Form.Label>Middle Name</Form.Label>
+            <Form.Control type="text" placeholder="" name="middleName" value={this.state.middleName}  onChange={this.handleChange}/>
+          </Form.Group>
+          <Form.Group controlId="lastName">
+            <Form.Label>Last Name</Form.Label>
+            <Form.Control type="text" placeholder="" name="lastName" value={this.state.lastName}  onChange={this.handleChange}/>
+          </Form.Group>
+          <Form.Group controlId="preferredName">
+            <Form.Label>Preferred Name</Form.Label>
+            <Form.Control type="text" placeholder="" name="preferredName" value={this.state.preferredName}  onChange={this.handleChange}/>
+          </Form.Group>
+          <Form.Group controlId="phoneNumber">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control type="text" placeholder="" name="phoneNumber" value={this.state.phoneNumber}  onChange={this.handleChange}/>
+          </Form.Group>
+          <Form.Group controlId="email">
+            <Form.Label>Email</Form.Label>
+            <Form.Control type="email" placeholder="" name="email" value={this.state.email}  onChange={this.handleChange}/>
+          </Form.Group>
+          <Form.Group controlId="role">
+            <Form.Label>Role</Form.Label>
+            <Form.Control as="select" name="role" value={this.state.role} onChange={this.handleChange}>
+              <option value="">---Please Select---</option>
+              <option value="JAVA_SPRING_DEVELOPER">Java Spring Developer</option>
+              <option value="PEGA_DEVELOPER">Pega Developer</option>
+              <option value="BUSINESS_ANALYST">Business Analyst</option>
+              <option value="AUTOMATION_QA">Automation QA</option>
+              <option value="MANUAL_QA">Manual QA</option>
+            </Form.Control>
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+  /*
         <form onSubmit={this.handleSubmit}>
-          <label>
+            
+          
             First Name:
             <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
           </label>
@@ -68,7 +121,7 @@ class EmployeeDetailForm extends React.Component {
             <input type="text" name="role" value={this.state.role} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
-        </form>
+        </form>*/
       );
     }
 
