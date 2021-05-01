@@ -6,7 +6,6 @@ import EmployeeDetailForm from './components/EmployeeDetailForm';
 function App() {
   return (
     <div>
-      <EmployeeDetailForm />
       <EmployeeSearchContainer />
     </div>
   );

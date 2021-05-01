@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+    <!-- Material Design for Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>Employee Manager</title>
+  </head>
+  <body>
+    <ul class="nav nav-tabs bg-dark">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Employee Management</a>
+        </li>
+    </ul>
+    <div class="container">
+        <h1>Search Employee</h1>
+        <form>
+            <div class="form-group">
+            <label for="employeeName" class="bmd-label-floating">Employee Name</label>
+            <input type="email" class="form-control" id="employeeName">
+            <span class="bmd-help">e.g. John Smith</span>
+            </div>
+            <div class="form-group">
+            <label for="employeeRole" class="bmd-label-floating">Employee Role</label>
+            <select class="form-control" id="employeeRole">
+                <option>---Please Select---</option>
+                <option>Java Spring Developer</option>
+                <option>Pega Developer</option>
+                <option>Business Analyst</option>
+                <option>Automation QA</option>
+                <option>Manual QA</option>
+            </select>
+            </div>
+            <button class="btn btn-default">Reset</button>
+            <button type="submit" class="btn btn-primary btn-raised alignRight">Search</button>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+  </body>
+</html>
